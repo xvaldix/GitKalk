@@ -1,3 +1,3 @@
 # GitKalk
-Kalkulator z obsługą dzielenia przez "0"
-Próba utworzenia programu z klasą "class"
+Kalkulator z blokadą dzielenia przez "0"
+Funkcje w klasie
