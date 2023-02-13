@@ -11,7 +11,7 @@ def mul (var1, var2):
     return var1 * var2
 
 while True:
-    znak = input("Podaj znak działania < +, -, *, / >: \n+")
+    znak = input("Podaj znak działania < +, -, *, / >: ")
     if znak == "+":
         var1 = float(input("Podaj pierwsza liczbe: "))
         var2 = float(input("Podaj druga liczbe: "))
