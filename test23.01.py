@@ -11,27 +11,31 @@ class Actions:
     def mul (var1, var2):
         return var1 * var2
 
+class StrToFloat:
+    def rep (var1):
+        return float(var1.replace(",","."))
+
 while True:
     znak = input("Podaj znak działania < +, -, *, / >: ")
     if znak == "+":
-        var1 = float(input("Podaj pierwsza liczbe: "))
-        var2 = float(input("Podaj druga liczbe: "))
-        print(f"{Actions.add(var1, var2)}")
+        var1 = input("Podaj pierwsza liczbe: ")
+        var2 = input("Podaj druga liczbe: ")
+        print(f"{(round(Actions.add(StrToFloat.rep(var1), StrToFloat.rep(var2)), 4))}")
     elif znak == "-":
-        var1 = float(input("Podaj pierwsza liczbe: "))
-        var2 = float(input("Podaj druga liczbe: "))
-        print(f"{Actions.sub(var1, var2)}")
+        var1 = input("Podaj pierwsza liczbe: ")
+        var2 = input("Podaj druga liczbe: ")
+        print(f"{(round(Actions.sub(StrToFloat.rep(var1), StrToFloat.rep(var2)), 4))}")
     elif znak == "/":
-        var1 = float(input("Podaj pierwsza liczbe: "))
-        var2 = float(input("Podaj druga liczbe: "))
-        while var2 == 0:
-            var2 = float(input("Podaj druga liczbe, nie może to być zero: "))
+        var1 = input("Podaj pierwsza liczbe: ")
+        var2 = input("Podaj druga liczbe: ")
+        while var2 == "0":
+            var2 = input(str("Podaj druga liczbe, nie może to być zero: "))
         else:
-            print(f"{Actions.div(var1, var2)}")
+            print(f"{(round(Actions.div(StrToFloat.rep(var1), StrToFloat.rep(var2)), 4))}")
     elif znak == "*":
-        var1 = float(input("Podaj pierwsza liczbe: "))
-        var2 = float(input("Podaj druga liczbe: "))
-        print(f"{Actions.mul(var1, var2)}")
+        var1 = input("Podaj pierwsza liczbe: ")
+        var2 = input("Podaj druga liczbe: ")
+        print(f"{(round(Actions.mul(StrToFloat.rep(var1), StrToFloat.rep(var2)), 4))}")
     else:
         print(f"Wprowadzono błędny znak.")
     
